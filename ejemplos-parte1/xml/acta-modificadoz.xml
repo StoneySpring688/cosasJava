@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<acta asignatura="1902" convocatoria="febrero" curso="2023">
+    <calificacion>
+        <nif>23322156M</nif>
+        <nota>10.0</nota>
+    </calificacion>
+    <calificacion>
+        <nif>13322156M</nif>
+        <nombre>Pepe</nombre>
+        <nota>8.5</nota>
+    </calificacion>
+    <diligencia fecha="2023-09-01" extraordinaria="false">
+        <fechaLocal/>
+        <nif>13322156M</nif>
+        <nota>9.0</nota>
+    </diligencia>
+</acta>

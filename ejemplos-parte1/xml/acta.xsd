@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="acta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="calificacion" type="calificacionTipo" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element name="diligencia" type="diligenciaTipo" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="asignatura" type="xs:string" use="required"/>
+      <xs:attribute name="convocatoria" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="febrero"/>
+            <xs:enumeration value="junio"/>
+            <xs:enumeration value="julio"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="curso" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="calificacionTipo"/>
+  <xs:complexType name="diligenciaTipo"/>
+</xs:schema>
