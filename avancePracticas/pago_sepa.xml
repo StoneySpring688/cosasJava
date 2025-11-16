@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.002.03">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>MSG-001-2025</MsgId>
+      <CreDtTm>2025-11-16T11:09:33</CreDtTm>
+      <NbOfTxns>2</NbOfTxns>
+      <CtrlSum>3500,50</CtrlSum>
+      <InitgPty>
+        <Nm>Mi Empresa S.L.</Nm>
+        <Id>
+          <OthrId>
+            <Othr>
+              <Id>ID-EMP-2025</Id>
+            </Othr>
+          </OthrId>
+        </Id>
+      </InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PYT-001</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxns>2</NbOfTxns>
+      <CtrlSum>3500,50</CtrlSum>
+      <PmtTpInf>
+        <InstrPrty>NORM</InstrPrty>
+        <SvcLvl>
+          <Cd>SEPA</Cd>
+        </SvcLvl>
+        <LclInstrm>
+          <Cd>CORE</Cd>
+        </LclInstrm>
+      </PmtTpInf>
+      <Dbtr>
+        <Nm>Mi Empresa S.L.</Nm>
+        <PstlAdr>
+          <Ctry>ES</Ctry>
+          <AdrLine>Calle Principal 123</AdrLine>
+        </PstlAdr>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <IBAN>ES9121000418450200051332</IBAN>
+        </Id>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <BIC>BBVAESMMXXX</BIC>
+        </FinInstnId>
+      </DbtrAgt>
+      <CdtTrfTxnInf>
+        <PmtId>
+          <InstrId>TRX-001</InstrId>
+          <EndToEndId>TRX-001</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">1000,50</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>CAIXESBBXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Proveedor A S.L.</Nm>
+          <PstlAdr>
+            <Ctry>ES</Ctry>
+            <AdrLine>Avenida Secundaria 456</AdrLine>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>ES1234567890123456789012</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Factura 001/2025</Ustrd>
+        </RmtInf>
+      </CdtTrfTxnInf>
+      <CdtTrfTxnInf>
+        <PmtId>
+          <InstrId>TRX-002</InstrId>
+          <EndToEndId>TRX-002</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">2500,00</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>SABADELLXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Proveedor B Ltd.</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>ES9876543210987654321098</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Factura 002/2025</Ustrd>
+        </RmtInf>
+      </CdtTrfTxnInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
