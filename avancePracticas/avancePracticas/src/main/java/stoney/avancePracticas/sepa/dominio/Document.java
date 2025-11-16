@@ -14,8 +14,11 @@ public class Document {
 	@XmlElement(name = "PmtInf", required = true)
 	List<PaymentInfo> paymentInfos;
 	
-	//TODO
-	private Document() {}
+	public Document(Encabezado encabezado, List<PaymentInfo> paymentInfos) {
+		super();
+		this.encabezado = encabezado;
+		this.paymentInfos = paymentInfos;
+	}
 
 	public Encabezado getEncabezado() {
 		return encabezado;
