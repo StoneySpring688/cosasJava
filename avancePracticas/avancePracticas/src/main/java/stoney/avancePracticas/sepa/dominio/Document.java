@@ -14,6 +14,8 @@ public class Document {
 	@XmlElement(name = "PmtInf", required = true)
 	List<PaymentInfo> paymentInfos;
 	
+	public Document() {}
+	
 	public Document(Encabezado encabezado, List<PaymentInfo> paymentInfos) {
 		super();
 		this.encabezado = encabezado;

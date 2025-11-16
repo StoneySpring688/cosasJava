@@ -9,6 +9,8 @@ public class Party {
 	@XmlElement(name = "Id", required = true)
 	private String id;
 	
+	public Party() {}
+	
 	public Party(String nombre, String id) {
 		this.nombre = nombre;
 		this.id = id;

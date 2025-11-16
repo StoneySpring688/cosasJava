@@ -17,6 +17,8 @@ public class Encabezado {
 	@XmlElement(name = "InitgPty", required = true)
 	private Party parteIniciadora;
 	
+	public Encabezado() {}
+	
 	public Encabezado(String msgId, LocalDateTime creationDateTime, int numberOfTransactions, double controlSum,
 			Party parteIniciadora) {
 		MsgId = msgId;
