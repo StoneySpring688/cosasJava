@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Gastos</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <div id="sidebar">
+        <h2>Empresas</h2>
+        <ul>
+            <!-- Las empresas se cargarán aquí desde la API -->
+            <li>Empresa 1</li>
+            <li>Empresa 2</li>
+            <li>Empresa 3</li>
+        </ul>
+        <div id="theme-toggle-wrapper">
+            <input type="checkbox" id="theme-checkbox">
+            <label for="theme-checkbox"></label>
+        </div>
+
+        <div id="toggle-buttons">
+            <button id="collapse-btn">&lt;&lt;</button>
+            <button id="expand-btn" style="display: none;">&gt;&gt;</button>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <h1>Hojas de Gastos</h1>
+
+        <div id="main-header">
+            <div>
+                <button>Generar Fichero 1</button>
+                <button>Generar Fichero 2</button>
+            </div>
+            <div>
+                <button id="filter-btn">Filtros</button>
+                <div id="filter-menu">
+                    <form>
+                        <!-- Campos del formulario de filtros -->
+                        <label for="filtro-empresa">Empresa:</label>
+                        <input type="text" id="filtro-empresa">
+                        <br><br>
+                        <button type="button">Borrar filtros</button>
+                        <button type="button">Filtrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="select-all"></th>
+                    <th>Empresa</th>
+                    <th>Propietario</th>
+                    <th>Fecha</th>
+                    <th>Importe</th>
+                    <th>Estado</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="expenses-table-body">
+                <!-- Fila de ejemplo 1 -->
+                <tr>
+                    <td><input type="checkbox" class="expense-checkbox"></td>
+                    <td>Empresa 1</td>
+                    <td>Juan Pérez</td>
+                    <td>2024-05-20</td>
+                    <td>150.00€</td>
+                    <td>Aprobado</td>
+                    <td>
+                        <button class="expand-expenses-btn">▼</button>
+                    </td>
+                </tr>
+                <tr class="expenses-row">
+                    <td colspan="7">
+                        <ul>
+                            <li>Gasto 1: 50.00€</li>
+                            <li>Gasto 2: 100.00€</li>
+                        </ul>
+                    </td>
+                </tr>
+                <!-- Fila de ejemplo 2 -->
+                <tr>
+                    <td><input type="checkbox" class="expense-checkbox"></td>
+                    <td>Empresa 2</td>
+                    <td>Ana López</td>
+                    <td>2024-05-22</td>
+                    <td>250.00€</td>
+                    <td>Pendiente</td>
+                    <td>
+                        <button class="expand-expenses-btn">▼</button>
+                    </td>
+                </tr>
+                <tr class="expenses-row">
+                    <td colspan="7">
+                        <ul>
+                            <li>Gasto 1: 100.00€</li>
+                            <li>Gasto 2: 150.00€</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

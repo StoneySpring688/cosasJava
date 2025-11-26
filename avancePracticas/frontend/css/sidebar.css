@@ -1,0 +1,109 @@
+/* --- SIDEBAR (Navigation Drawer) --- */
+#sidebar {
+    height: 100vh;
+    background-color: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface-variant);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--md-sys-color-outline-variant);
+    
+    /* Lógica de animación simple */
+    width: 260px;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    white-space: nowrap;
+}
+
+#sidebar.collapsed { width: 72px; }
+
+/* --- ELEMENTOS INTERNOS --- */
+#sidebar h2, 
+#sidebar ul, 
+#sidebar #theme-toggle-wrapper {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    margin-bottom: 24px; 
+}
+
+#sidebar.collapsed h2, 
+#sidebar.collapsed ul, 
+#sidebar.collapsed #theme-toggle-wrapper {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Ajustes específicos */
+#sidebar h2 {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    margin: 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 12px;
+    margin: 0;
+}
+
+#sidebar ul li {
+    padding: 12px 16px;
+    margin-bottom: 4px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+#sidebar ul li:hover {
+    background-color: var(--md-sys-color-outline-variant);
+}
+
+/* --- INTERRUPTOR DE TEMA (Toggle 3D) --- */
+#theme-toggle-wrapper {
+    margin-top: auto; /* Empuja todo al fondo */
+    align-self: center;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#theme-toggle-wrapper input { display: none; }
+
+#theme-toggle-wrapper label {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    display: block;
+    background: var(--md-sys-color-outline-variant); 
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: inset 0px 2px 5px rgba(0,0,0,0.3);
+    transition: 0.5s;
+}
+
+#theme-toggle-wrapper label:after {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: 0.5s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#theme-toggle-wrapper input:checked ~ label { background: var(--md-sys-color-primary-container); }
+#theme-toggle-wrapper input:checked ~ label:after { left: 33px; background: var(--md-sys-color-primary); }
+
+/* --- FLECHAS DE CONTROL --- */
+#toggle-buttons {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    opacity: 1 !important; 
+    pointer-events: auto !important;
+}
