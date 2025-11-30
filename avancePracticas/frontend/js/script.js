@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
         sidebar.classList.add('collapsed');
         collapseBtn.style.display = 'none';
         expandBtn.style.display = 'inline-block';
+        localStorage.setItem('sidebarState', 'collapsed');
     });
 
     expandBtn.addEventListener('click', () => {
         sidebar.classList.remove('collapsed');
         expandBtn.style.display = 'none';
         collapseBtn.style.display = 'inline-block';
+        localStorage.removeItem('sidebarState');
     });
 
     filterBtn.addEventListener('click', (event) => {
@@ -66,4 +68,11 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.add('dark-mode');
         themeToggleCheckBox.checked = true;
     }
+
+    if (localStorage.getItem('sidebarState') === 'collapsed') {
+        sidebar.classList.add('collapsed');
+        collapseBtn.style.display = 'none';
+        expandBtn.style.display = 'inline-block';
+    }
+
 });

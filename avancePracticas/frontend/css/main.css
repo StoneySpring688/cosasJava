@@ -75,8 +75,6 @@ th {
     font-size: 0.875rem;
 }
 
-tbody tr:last-child td { border-bottom: none; }
-
 /* --- SUB-TABLA DE DETALLES (GASTOS) --- */
 .expenses-row {
     display: none;
