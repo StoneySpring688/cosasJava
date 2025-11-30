@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* --- SISTEMA DE DISEÑO (VARIABLES GLOBALES) --- */
+:root {
+    /* PALETA CLARA */
+    --md-sys-color-primary: #005AC1;
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: #D8E2FF;
+    --md-sys-color-on-primary-container: #001A41;
+
+    --md-sys-color-background: #FEFBFF;
+    --md-sys-color-on-background: #1B1B1F;
+    
+    --md-sys-color-surface: #FEFBFF;
+    --md-sys-color-surface-container: #F3F3FA;
+    --md-sys-color-on-surface: #1B1B1F;
+    --md-sys-color-on-surface-variant: #44474F;
+    
+    --md-sys-color-outline: #74777F;
+    --md-sys-color-outline-variant: #C4C6D0;
+
+    /* Dimensiones */
+    --header-height: 64px;
+    --border-radius-m: 12px;
+    --border-radius-s: 8px;
+}
+
+.dark-mode {
+    /* PALETA OSCURA */
+    --md-sys-color-primary: #ADC6FF;
+    --md-sys-color-on-primary: #002E69;
+    --md-sys-color-primary-container: #004494;
+    --md-sys-color-on-primary-container: #D8E2FF;
+
+    --md-sys-color-background: #1B1B1F;
+    --md-sys-color-on-background: #E3E2E6;
+
+    --md-sys-color-surface: #1B1B1F;
+    --md-sys-color-surface-container: #23252A;
+    --md-sys-color-on-surface: #E3E2E6;
+    --md-sys-color-on-surface-variant: #C4C6D0;
+
+    --md-sys-color-outline: #8E9099;
+    --md-sys-color-outline-variant: #44474F;
+}
+
+/* --- RESET & BASE --- */
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background-color: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-surface);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- COMPONENTE BASE: BOTÓN (Compartido) --- */
+button {
+    height: 40px;
+    padding: 0 24px;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+button:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    opacity: 0.9;
+}

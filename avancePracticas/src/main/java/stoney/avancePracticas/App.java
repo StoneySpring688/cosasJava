@@ -1,34 +1,18 @@
 package stoney.avancePracticas;
 
-import org.slf4j.Logger;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
-import stoney.avancePracticas.casosDeUso.HacerExcel;
+@SpringBootApplication
+public class App {
 
-
-
-/**
- * Hello world!
- *
- */
-public class App 
-{
-	private static final Logger logger = org.slf4j.LoggerFactory.getLogger(App.class);
-    public static void main( String[] args ) throws Exception
-    {
-        logger.info("Hello World!" );
-        logger.debug("This is a debug message.");
-        logger.info("Fecha y hora actual: {}", java.time.LocalDateTime.now());
-        testExcel();
+    public static void main(String[] args) {
+        // FORMA ANTIGUA: SpringApplication.run(TuAplicacionApplication.class, args);
         
-        
-    }
-    private static void testExcel() {
-		try {
-			HacerExcel.hacerTablaBasica();
-			HacerExcel.hacerTablaCompleta();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        // FORMA NUEVA (Para permitir abrir navegador):
+        new SpringApplicationBuilder(App.class)
+                .headless(false) // <--- ESTA ES LA CLAVE
+                .run(args);
     }
 }

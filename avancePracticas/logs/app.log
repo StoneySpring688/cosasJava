@@ -1,27 +1,127 @@
-16:52:02.849 [main] INFO  stoney.avancePracticas.App - Hello World!
-16:52:02.850 [main] INFO  stoney.avancePracticas.App - Fecha y hora actual: 2025-10-26T16:52:02.850609754
-16:52:02.851 [main] ERROR stoney.avancePracticas.App - This is an error message.
-16:52:12.851 [main] INFO  stoney.avancePracticas.App - Finished sleeping for 5 seconds.
-17:08:19.511 [main] INFO  stoney.avancePracticas.App - Hello World!
-17:08:19.511 [main] INFO  stoney.avancePracticas.App - Fecha y hora actual: 2025-10-26T17:08:19.511854876
-17:08:19.512 [main] ERROR stoney.avancePracticas.App - This is an error message.
-17:08:29.513 [main] INFO  stoney.avancePracticas.App - Finished sleeping for 5 seconds.
-17:08:29.594 [main] INFO  s.avancePracticas.sepa.HacerSEPA - Archivo SEPA generado: pago_sepa.xml
-17:24:11.298 [main] INFO  stoney.avancePracticas.App - Hello World!
-17:24:11.299 [main] INFO  stoney.avancePracticas.App - Fecha y hora actual: 2025-10-26T17:24:11.299692094
-17:24:11.300 [main] ERROR stoney.avancePracticas.App - This is an error message.
-17:24:21.300 [main] INFO  stoney.avancePracticas.App - Finished sleeping for 5 seconds.
-20:22:55.177 [main] INFO  stoney.avancePracticas.App - Hello World!
-20:22:55.178 [main] INFO  stoney.avancePracticas.App - Fecha y hora actual: 2025-10-26T20:22:55.178737090
-20:27:45.125 [main] INFO  stoney.avancePracticas.App - Hello World!
-20:29:13.919 [main] INFO  stoney.avancePracticas.App - Hello World!
-20:29:13.920 [main] INFO  stoney.avancePracticas.App - Fecha y hora actual: 2025-10-26T20:29:13.920327503
-20:34:51.962 [main] INFO  stoney.avancePracticas.App - Hello World!
-20:34:51.963 [main] INFO  stoney.avancePracticas.App - Fecha y hora actual: 2025-10-26T20:34:51.963269655
-20:37:23.052 [main] INFO  stoney.avancePracticas.App - Hello World!
-20:37:23.052 [main] INFO  stoney.avancePracticas.App - Fecha y hora actual: 2025-10-26T20:37:23.052875467
-20:44:34.254 [main] INFO  stoney.avancePracticas.App - Hello World!
-20:44:34.254 [main] INFO  stoney.avancePracticas.App - Fecha y hora actual: 2025-10-26T20:44:34.254790733
-20:51:49.837 [main] INFO  stoney.avancePracticas.App - Hello World!
-20:51:49.838 [main] INFO  stoney.avancePracticas.App - Fecha y hora actual: 2025-10-26T20:51:49.838665130
-20:51:50.725 [main] INFO  s.a.excel.ExcelTablaCompleta - Archivo creado: gastos.xlsx
+12:02:34.035 [main] INFO  stoney.avancePracticas.App - Starting App using Java 17.0.17 with PID 27210 (/media/stoneyspring/SSD/SSD/Infor/Tercero/Practicas/avancePracticas/avancePracticas/target/classes started by stoneyspring in /media/stoneyspring/SSD/SSD/Infor/Tercero/Practicas/avancePracticas/avancePracticas)
+12:02:34.037 [main] INFO  stoney.avancePracticas.App - No active profile set, falling back to 1 default profile: "default"
+12:02:34.248 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:02:34.260 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+12:02:34.395 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:02:34.504 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:8688e211-d4e8-4c8a-95fe-68e668f0a78e user=SA
+12:02:34.505 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:02:34.528 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:02:34.553 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+12:02:34.573 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+12:02:34.743 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+12:02:34.782 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+12:02:34.947 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+12:02:34.950 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:02:35.033 [main] INFO  stoney.avancePracticas.App - Started App in 1.182 seconds (process running for 1.573)
+12:02:35.117 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:02:35.118 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+12:02:35.120 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+12:03:16.872 [main] INFO  stoney.avancePracticas.App - Starting App using Java 17.0.17 with PID 27540 (/media/stoneyspring/SSD/SSD/Infor/Tercero/Practicas/avancePracticas/avancePracticas/target/classes started by stoneyspring in /media/stoneyspring/SSD/SSD/Infor/Tercero/Practicas/avancePracticas/avancePracticas)
+12:03:16.873 [main] INFO  stoney.avancePracticas.App - No active profile set, falling back to 1 default profile: "default"
+12:03:17.116 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:03:17.128 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+12:03:17.253 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:03:17.356 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:957e58c9-6d1b-4be4-b269-6cef13fad848 user=SA
+12:03:17.357 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:03:17.380 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:03:17.405 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+12:03:17.423 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+12:03:17.572 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+12:03:17.620 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+12:03:17.792 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+12:03:17.795 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:03:17.882 [main] INFO  stoney.avancePracticas.App - Started App in 1.181 seconds (process running for 1.508)
+12:03:17.952 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:03:17.954 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+12:03:17.956 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+12:04:53.786 [main] INFO  stoney.avancePracticas.App - Starting App using Java 17.0.17 with PID 27947 (/media/stoneyspring/SSD/SSD/Infor/Tercero/Practicas/avancePracticas/avancePracticas/target/classes started by stoneyspring in /media/stoneyspring/SSD/SSD/Infor/Tercero/Practicas/avancePracticas/avancePracticas)
+12:04:53.787 [main] INFO  stoney.avancePracticas.App - No active profile set, falling back to 1 default profile: "default"
+12:04:54.008 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:04:54.020 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+12:04:54.148 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:04:54.259 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:d3b7967a-f2c7-4763-80a3-c5d4099d6156 user=SA
+12:04:54.260 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:04:54.285 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:04:54.314 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+12:04:54.334 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+12:04:54.485 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+12:04:54.534 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+12:04:54.716 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+12:04:54.718 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:04:54.808 [main] INFO  stoney.avancePracticas.App - Started App in 1.203 seconds (process running for 1.547)
+12:04:54.886 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:04:54.888 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+12:04:54.889 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+12:07:11.868 [main] INFO  stoney.avancePracticas.App - Starting App using Java 17.0.17 with PID 28474 (/media/stoneyspring/SSD/SSD/Infor/Tercero/Practicas/avancePracticas/avancePracticas/target/classes started by stoneyspring in /media/stoneyspring/SSD/SSD/Infor/Tercero/Practicas/avancePracticas/avancePracticas)
+12:07:11.870 [main] INFO  stoney.avancePracticas.App - No active profile set, falling back to 1 default profile: "default"
+12:07:12.278 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+12:07:12.291 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+12:07:12.292 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:07:12.292 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+12:07:12.322 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:07:12.322 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 431 ms
+12:07:12.495 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+12:07:12.503 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+12:07:12.509 [main] INFO  stoney.avancePracticas.App - Started App in 0.815 seconds (process running for 1.149)
+12:07:12.764 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:07:12.764 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:07:12.765 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:07:23.623 [RMI TCP Connection(7)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+12:07:23.625 [RMI TCP Connection(7)-127.0.0.1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+12:07:23.626 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+12:07:23.627 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+12:07:23.628 [RMI TCP Connection(7)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+12:07:24.619 [main] INFO  stoney.avancePracticas.App - Starting App using Java 17.0.17 with PID 28691 (/media/stoneyspring/SSD/SSD/Infor/Tercero/Practicas/avancePracticas/avancePracticas/target/classes started by stoneyspring in /media/stoneyspring/SSD/SSD/Infor/Tercero/Practicas/avancePracticas/avancePracticas)
+12:07:24.620 [main] INFO  stoney.avancePracticas.App - No active profile set, falling back to 1 default profile: "default"
+12:07:25.028 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+12:07:25.035 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+12:07:25.036 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:07:25.036 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+12:07:25.060 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:07:25.060 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 419 ms
+12:07:25.234 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+12:07:25.241 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+12:07:25.247 [main] INFO  stoney.avancePracticas.App - Started App in 0.813 seconds (process running for 1.172)
+12:07:25.496 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:07:25.496 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:07:25.497 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:07:32.726 [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+12:07:32.728 [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+12:07:32.728 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+12:07:32.730 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+12:07:32.730 [RMI TCP Connection(8)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+12:07:36.996 [main] INFO  stoney.avancePracticas.App - Starting App using Java 17.0.17 with PID 28892 (/media/stoneyspring/SSD/SSD/Infor/Tercero/Practicas/avancePracticas/avancePracticas/target/classes started by stoneyspring in /media/stoneyspring/SSD/SSD/Infor/Tercero/Practicas/avancePracticas/avancePracticas)
+12:07:36.997 [main] INFO  stoney.avancePracticas.App - No active profile set, falling back to 1 default profile: "default"
+12:07:37.405 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+12:07:37.412 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+12:07:37.413 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:07:37.413 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+12:07:37.437 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:07:37.437 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 418 ms
+12:07:37.619 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+12:07:37.626 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+12:07:37.632 [main] INFO  stoney.avancePracticas.App - Started App in 0.814 seconds (process running for 1.15)
+12:07:37.908 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:07:37.908 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:07:37.909 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
