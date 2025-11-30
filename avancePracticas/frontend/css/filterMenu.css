@@ -1,0 +1,80 @@
+#filter-menu h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    color: var(--md-sys-color-primary);
+}
+
+.filter-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter-menu label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.filter-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+#filter-menu input[type="text"],
+#filter-menu input[type="number"],
+#filter-menu input[type="date"],
+#filter-menu select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 4px;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.9rem;
+    margin-top: 0;
+    height: 40px;
+}
+
+#filter-menu input:focus,
+#filter-menu select:focus {
+    outline: 2px solid var(--md-sys-color-primary);
+    border-color: transparent;
+}
+
+.filter-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.btn-outlined {
+    background-color: transparent;
+    border: 1px solid var(--md-sys-color-outline);
+    color: var(--md-sys-color-primary);
+    box-shadow: none;
+}
+
+.btn-outlined:hover {
+    background-color: var(--md-sys-color-surface-container);
+    opacity: 1;
+}
+
+.input-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-label {
+    font-size: 0.75rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 4px;
+    font-weight: 400;
+}

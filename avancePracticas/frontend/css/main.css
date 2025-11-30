@@ -77,19 +77,48 @@ th {
 
 tbody tr:last-child td { border-bottom: none; }
 
-/* Filas Expandibles */
-.expenses-row { display: none; }
-
-.expenses-row td {
-    background-color: var(--md-sys-color-surface-container);
-    padding: 0;
+/* --- SUB-TABLA DE DETALLES (GASTOS) --- */
+.expenses-row {
+    display: none;
 }
 
-.expenses-row ul {
-    padding: 16px 32px;
+.sub-table-wrapper {
+    padding: 16px 24px;
+    background-color: var(--md-sys-color-surface-container);
+}
+
+table.sub-table {
+    width: 100%;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    background-color: var(--md-sys-color-surface);
     margin: 0;
-    list-style-type: disc;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+table.sub-table th {
+    background-color: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+table.sub-table td {
+    background-color: var(--md-sys-color-surface);
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface);
+}
+
+table.sub-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+table.sub-table tbody tr:hover td {
+    background-color: var(--md-sys-color-surface-container);
 }
 
 /* --- MENÚ FILTROS --- */

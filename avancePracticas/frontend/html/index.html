@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/filterMenu.css">
 </head>
 
 <body>
@@ -42,13 +43,54 @@
             <div>
                 <button id="filter-btn">Filtros</button>
                 <div id="filter-menu">
-                    <form>
-                        <!-- Campos del formulario de filtros -->
-                        <label for="filtro-empresa">Empresa:</label>
-                        <input type="text" id="filtro-empresa">
-                        <br><br>
-                        <button type="button">Borrar filtros</button>
-                        <button type="button">Filtrar</button>
+                    <form id="filter-form">
+                        <h3>Filtrar Gastos</h3>
+
+                        <div class="filter-group">
+                            <label for="filtro-propietario">Propietario</label>
+                            <input type="text" id="filtro-propietario" placeholder="Ej. Juan Pérez">
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="filtro-estado">Estado</label>
+                            <select id="filtro-estado">
+                                <option value="">Todos</option>
+                                <option value="aprobado">Aprobado</option>
+                                <option value="pendiente">Pendiente</option>
+                                <option value="rechazado">Rechazado</option>
+                            </select>
+                        </div>
+
+                        <label>Importe (€)</label>
+                        <div class="filter-row">
+                            <div class="input-wrapper">
+                                <span class="sub-label">Desde</span>
+                                <input type="number" id="filtro-importe-desde" placeholder="Ej. 0">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <span class="sub-label">Hasta</span>
+                                <input type="number" id="filtro-importe-hasta" placeholder="Ej. 200">
+                            </div>
+                        </div>
+
+                        <label>Fecha</label>
+                        <div class="filter-row">
+                            <div class="input-wrapper">
+                                <span class="sub-label">Desde</span>
+                                <input type="date" id="filtro-fecha-desde" placeholder="Seleccionar">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <span class="sub-label">Hasta</span>
+                                <input type="date" id="filtro-fecha-hasta" placeholder="Seleccionar">
+                            </div>
+                        </div>
+
+                        <div class="filter-actions">
+                            <button type="button" id="btn-borrar-filtros" class="btn-outlined">Limpiar</button>
+                            <button type="button" id="btn-aplicar-filtros">Filtrar</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -81,10 +123,29 @@
                 </tr>
                 <tr class="expenses-row">
                     <td colspan="7">
-                        <ul>
-                            <li>Gasto 1: 50.00€</li>
-                            <li>Gasto 2: 100.00€</li>
-                        </ul>
+                        <div class="sub-table-wrapper">
+                            <table class="sub-table">
+                                <thead>
+                                    <tr>
+                                        <th>Concepto</th>
+                                        <th>Fecha</th>
+                                        <th>Cantidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Taxi Aeropuerto</td>
+                                        <td>2024-05-19</td>
+                                        <td>50.00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cena Cliente</td>
+                                        <td>2024-05-19</td>
+                                        <td>100.00€</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </td>
                 </tr>
                 <!-- Fila de ejemplo 2 -->
@@ -101,10 +162,29 @@
                 </tr>
                 <tr class="expenses-row">
                     <td colspan="7">
-                        <ul>
-                            <li>Gasto 1: 100.00€</li>
-                            <li>Gasto 2: 150.00€</li>
-                        </ul>
+                        <div class="sub-table-wrapper">
+                            <table class="sub-table">
+                                <thead>
+                                    <tr>
+                                        <th>Concepto</th>
+                                        <th>Fecha</th>
+                                        <th>Cantidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Taxi Aeropuerto</td>
+                                        <td>2024-05-19</td>
+                                        <td>50.00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cena Cliente</td>
+                                        <td>2024-05-19</td>
+                                        <td>100.00€</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </td>
                 </tr>
             </tbody>
@@ -112,6 +192,7 @@
     </div>
 
     <script src="../js/script.js"></script>
+    <script src="../js/filtros.js"></script>
 
 </body>
 
