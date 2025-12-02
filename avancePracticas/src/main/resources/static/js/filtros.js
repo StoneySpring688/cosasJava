@@ -14,6 +14,7 @@ const inputFechaHasta = document.getElementById('filtro-fecha-hasta');
 btnBorrarFiltros.addEventListener('click', () => {
     document.getElementById('filter-form').reset();
     console.log("Filtros limpiados");
+    Logger.log("Borrando filtros");
 });
 
 // Función para aplicar filtros y generar JSON
@@ -34,6 +35,9 @@ btnAplicarFiltros.addEventListener('click', () => {
     // TODO BORRAR LOG DEL JSON
     console.log('--- ENVIANDO FILTROS AL BACKEND ---');
     console.log(JSON.stringify(filtrosDTO, null, 2));
+
+    Logger.log("Aplicando filtros");
+    Logger.error("Esto es una prueba 123456789012345678901234567890123456789012345")
     
     // Cerrar el menú tras filtrar
     document.getElementById('filter-menu').style.display = 'none';

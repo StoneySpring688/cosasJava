@@ -149,3 +149,98 @@ input[type="text"]:focus {
     outline: 2px solid var(--md-sys-color-primary);
     border-color: transparent;
 }
+
+/* --- POP-UP DE MENSAJES (LOGGER) --- */
+.message-popup {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 350px;
+
+    max-height: 250px;
+    
+    background-color: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--border-radius-m);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* Sombra fuerte para flotar */
+    
+    display: flex;
+    flex-direction: column;
+    z-index: 100; /* Por encima de todo (Filtros tienen z-index: 10) */
+    overflow: hidden;
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Animación de entrada suave */
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Cabecera del popup */
+.popup-header {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Botón de cerrar (X) */
+#btn-close-popup {
+    background: transparent;
+    border: none;
+    color: var(--md-sys-color-on-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    box-shadow: none;
+}
+#btn-close-popup:hover {
+    opacity: 0.8;
+}
+
+/* Área de contenido (con Scroll) */
+#popup-content-area {
+    padding: 16px;
+    overflow-y: auto; /* Scroll vertical automático */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+/* --- ESTILOS DE LOS MENSAJES --- */
+
+/* Mensaje Normal */
+.msg-log {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    word-wrap: break-word; /* Evita que textos largos rompan el diseño */
+}
+
+/* Mensaje de Error */
+.msg-error {
+    color: #ba1a1a; /* Rojo estándar MD3 Light */
+    font-weight: 500;
+}
+
+/* Ajuste para modo oscuro en errores */
+.dark-mode .msg-error {
+    color: #ffb4ab; /* Rojo pastel MD3 Dark */
+}
+
+/* Marca de tiempo pequeña */
+.msg-time {
+    font-size: 0.7rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-right: 6px;
+}
