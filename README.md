@@ -3,6 +3,7 @@
 # Índice
 * [Compilar](#compilar)
 * [Arquitectura](#arquitectura)
+* [Diagamas de flujo](#flujo)
 
 <a id="compilar"></a>
 ## Como compilar la aplicación
@@ -62,4 +63,16 @@ La aplicación se distrubuye en las siguientes capas:
 - **Application**. Aquí se encuentran el controlador, los casos de uso, las configuraciones de springboot(CorsConfig), el BrowserLauncher y el main.
 - **Infraestructura**. Esta es la capa más cambiante. Aquí van los servicios(de dominio, parsers, ...), los puertos con sus adaptadores, los utils, las constantes(del paquete constants), el dominio del sepa.
 
-
+<a id="flujo"></a>
+## Diagrama de flujo breve
+Al iniciar la App
+```mermaid
+flowchart TD;
+A([Inicio]) --> B[[Controller.start]];
+B --> C[[CduFetchEmpresaData.fetchEmpresaData]];
+C --> D[[ServicioUsuarios.obtenerUsuariosEmpresa]];
+C --> E[[ServicioHojasGastos.obtenerHojasGastosEmpresaNoPaginacion]];
+C -- forEach HojaGastos --> F[[ServicioGastos.obtenerGastosHojaGastosParalelizado]];
+F -- catch --> Ex1{Exception};
+Ex1 --> Err1[Omitir Hoja Gastos];
+```
