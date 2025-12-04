@@ -29,6 +29,10 @@ Es recomendable comprobar que el progama se ejecuta correctamente con nuestra ve
 
 *nota*: para probarlo de esta forma es preferible hacerlo dentro del directorio *out\\* para evitar generar más directorios con ficheros (log, navision, sepa) en la raíz del proyecto. 
 ### "Empaquetarlo" con un jre
+Antes de continuar es necesario instalar una versión del *jdk* (ya que es bastante más rápido que reiniciar el docker engine y descargar una imagen de docker con windows), para ello basta con usar uno de estos enlaces:
+- enlace de descarga directa para jdk 21 https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe
+- enlace a Oracle para seleccionar el release (mínimo jdk 21) https://www.oracle.com/es/java/technologies/downloads/
+
 Para poder lanzar la app sin preocuparnos por instalar la versión de java adecuada, lo empaquetaremos con nuestra versión del *jre*.
 
 Para ello usaremos este comando desde el diretorio donde está el fichero *pom.xml*:
