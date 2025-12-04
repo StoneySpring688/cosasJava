@@ -25,7 +25,7 @@ Este *.jar* ya es perfectamente usable (siempre que java 21 o posterior esté in
 ```bash
 java -jar <nombre-del-jar>
 ```
-*nota*: para probarlo de esta forma es preferible hacerlo dentro del directorio *out\\* para evitar generar más directorios con ficheros (log, navision, sepa) en la raíz del proyecto. 
+*nota*: para probarlo de esta forma es preferible hacerlo dentro del directorio *out\\* para evitar generar más directorios con ficheros (log, navision, sepa) en la raíz del proyecto. Así como eliminar cualquier otra cosa que no sea el *.jar* dentro de este directorio, tras ejecutar la app de esta forma.
 
 Es recomendable comprobar que el progama se ejecuta correctamente con nuestra versión de java antes de pasar al siguiente paso.
 
