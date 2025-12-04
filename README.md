@@ -67,12 +67,49 @@ La aplicación se distrubuye en las siguientes capas:
 ## Diagrama de flujo breve
 Al iniciar la App
 ```mermaid
-flowchart TD;
-A([Inicio]) --> B[[Controller.start]];
-B --> C[[CduFetchEmpresaData.fetchEmpresaData]];
-C --> D[[ServicioUsuarios.obtenerUsuariosEmpresa]];
-C --> E[[ServicioHojasGastos.obtenerHojasGastosEmpresaNoPaginacion]];
-C -- forEach HojaGastos --> F[[ServicioGastos.obtenerGastosHojaGastosParalelizado]];
-F -- catch --> Ex1{Exception};
-Ex1 --> Err1[Omitir Hoja Gastos];
+sequenceDiagram
+    autonumber
+    actor User as Inicio App
+    participant Ctrl as Controller
+    participant CDU as CduFetchEmpresaData
+    participant SrvUser as ServicioUsuarios
+    participant SrvHojas as ServicioHojasGastos
+    participant SrvGastos as ServicioGastos
+    participant Rep as Repositorios
+
+    User->>Ctrl: start()
+    activate Ctrl
+    
+    Ctrl->>CDU: fetchEmpresaData()
+    activate CDU
+    
+    %% Paso 1
+    CDU->>SrvUser: obtenerUsuariosEmpresa()
+    activate SrvUser
+    SrvUser-->>Rep: add() users al RepositorioUsuarios
+    deactivate SrvUser
+
+    %% Paso 2
+    CDU->>SrvHojas: obtenerHojasGastosEmpresaNoPaginacion()
+    activate SrvHojas
+    SrvHojas-->>Rep: add() listaHojas al RepositorioHojasGastos
+    deactivate SrvHojas
+
+    %% Paso 3: Bucle y Try-Catch
+    loop forEach HojaGastos
+        alt Try
+            CDU->>SrvGastos: obtenerGastosHojaGastosParalelizado()
+            activate SrvGastos
+            SrvGastos-->>CDU: return gastos
+            deactivate SrvGastos
+        else Catch Exception
+            SrvGastos--xCDU: Lanza Excepción
+            Note over CDU: Omitir Hoja Gastos (Log error)
+        end
+    end
+
+    CDU-->>Ctrl: fin proceso
+    deactivate CDU
+    Ctrl-->>User: OK
+    deactivate Ctrl
 ```
