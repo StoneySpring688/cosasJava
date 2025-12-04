@@ -1,5 +1,10 @@
 # Documentacion Tecnica
 
+# Índice
+* [Compilar](#compilar)
+* [Arquitectura](#arquitectura)
+
+<a id="compilar"></a>
 ## Como compilar la aplicación
 Al tratarse de una aplicación java, necesitamos 2 cosas :
 1. El *.jar* que permite ejecutar la app.
@@ -49,3 +54,12 @@ Explicación del comando :
 6. ``--win-console`` le indica que muestre la terminal (en nuestro caso es útil, ya que levantamos un servidor el cual debe finalizarse para cerrar la app).
 
 Esto nos dejará un directorio con el nombre de la aplicación, el cual contendrá un *.exe*, este ejecutable no debe moverse fuera de ese directorio (si es posible mover todo el directorio con el nombre de la app) ya que requiere las dependencias del runtime y el jar (sin esto de nada nos sirve haberla empaquetado con el *jre*).
+
+<a id="arquitectura"></a>
+## Aquitectura de la App
+La aplicación se distrubuye en las siguientes capas:
+- **Core**. Aquí se encuentran el modelo de dominio, las excepciones y los repositorios.
+- **Application**. Aquí se encuentran el controlador, los casos de uso, las configuraciones de springboot(CorsConfig), el BrowserLauncher y el main.
+- **Infraestructura**. Esta es la capa más cambiante. Aquí van los servicios(de dominio, parsers, ...), los puertos con sus adaptadores, los utils, las constantes(del paquete constants), el dominio del sepa.
+
+
